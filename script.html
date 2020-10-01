@@ -10,26 +10,45 @@
 <body>
     <script>
 
-        function inflacao(valorInicial, valorFinal, dataInicial, dataFinal, produto) {
+        function inflacaoMedia(valorInicial, valorFinal, dataInicial, dataFinal) {
 
             var valorInflacao = valorFinal - valorInicial;
             var dataInflacao = dataFinal - dataInicial;
             var inflacaoMedia = (valorInflacao / dataInflacao);
 
-
-            document.write("media da inflação do " + produto + " é " + inflacaoMedia + "<br><br>");
             return inflacaoMedia
         }
+        function inflacaoAcumulada(valorInicial, valorFinal) {
 
-        var inflacaoTomate = inflacao(3.30, 4.70, 24, 30, "tomate");
+            var inflacaoTotal = valorFinal - valorInicial;
+            return inflacaoTotal
 
-        var inflacaoArroz = inflacao(2.99, 3.25, 24, 30, "arroz");
+        }
 
-        var inflacaoCenoura = inflacao(3.99, 4.14, 24, 30, "cenoura");
+        var inflacaoMediaTomate = inflacaoMedia (3.30, 4.70, 24, 30)
+        var inflacaoAcumuladaTomate = inflacaoAcumulada (3.30, 4.70)
+        
+        var inflacaoMediaArroz = inflacaoMedia (2.99, 3.25, 24, 30)
+        var inflacaoAcumuladaArroz = inflacaoAcumulada (2.99, 3.25)
 
-        var mediaInflacao = ((inflacaoTomate + inflacaoArroz + inflacaoCenoura) / 3).toFixed(2)  ;
+        var inflacaoMediaCenoura = inflacaoMedia (3.99, 4.14, 24,30)
+        var inflacaoAcumuladaCenoura = inflacaoAcumulada (3.99, 4.14, 24, 30)
 
-        document.write("A inflação média diária dos produtos é de " + mediaInflacao)
+
+
+        var mediaInflacao = ((inflacaoMediaTomate + inflacaoMediaCenoura + inflacaoMediaArroz) /3).toFixed(2)
+        var totalInflacao = (inflacaoAcumuladaArroz + inflacaoAcumuladaCenoura + inflacaoAcumuladaTomate).toFixed(2)
+
+        document.write("A inflação média diária dos produtos é de " + mediaInflacao + "<br><br>")
+        document.write("A inflação total dos produtos é de" + totalInflacao + "<br><br>")
+        document.write("A inflação média do tomate é de" + inflacaoMediaTomate + "<br>")
+        document.write("A inflação total do tomate é de" + inflacaoAcumuladaTomate + "<br>")
+        document.write("A inflação média do arroz é de" + inflacaoMediaArroz + "<br>")
+        document.write("A inflação total do arroz é de" + inflacaoAcumuladaArroz + "<br>")
+        document.write("A inflação total do cenoura é de" + inflacaoMediaCenoura + "<br>")
+        document.write("A inflação total do cenoura é de" + inflacaoAcumuladaCenoura + "<br>")
+
+
 
     </script>
 </body>
