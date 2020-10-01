@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function pizza(vendaPizza,custoPizza, nome) {
+
+            var imposto= vendaPizza * 0.089;
+            var lucroLiquido= vendaPizza - custoPizza - imposto;
+             
+             document.write("Para a " + nome + " o lucro liquido é de R$" + 
+             lucroLiquido + " e o imposto é de " + imposto)
+             }
+
+            pizza(30, 10, "pizzapepo")
+
+         
+</script>
+</body>
