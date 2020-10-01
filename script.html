@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function inflacao(valorInicial, valorFinal, dataInicial, dataFinal, produto) {
+
+            var valorInflacao = valorFinal - valorInicial;
+            var dataInflacao = dataFinal - dataInicial;
+            var inflacaoMedia = (valorInflacao / dataInflacao);
+
+
+            document.write("media da inflação do " + produto + " é " + inflacaoMedia + "<br><br>");
+            return inflacaoMedia
+        }
+
+        var inflacaoTomate = inflacao(3.30, 4.70, 24, 30, "tomate");
+
+        var inflacaoArroz = inflacao(2.99, 3.25, 24, 30, "arroz");
+
+        var inflacaoCenoura = inflacao(3.99, 4.14, 24, 30, "cenoura");
+
+        var mediaInflacao = ((inflacaoTomate + inflacaoArroz + inflacaoCenoura) / 3).toFixed(2)  ;
+
+        document.write("A inflação média diária dos produtos é de " + mediaInflacao)
+
+    </script>
+</body>
+
+</html>
