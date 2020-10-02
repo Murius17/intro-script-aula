@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        function usuario (idade, permitido){
+            if (idade < permitido){
+                mostra ("Você não pode dirigir!")
+            }
+            else {
+                mostra ("Você pode dirigir!")
+            }
+        }
+        usuario (17, 18);
+
+        
+
+    </script>
