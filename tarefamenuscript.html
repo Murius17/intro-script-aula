@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+<title>MENU</title>
+
+<body>
+
+    <script>
+
+        function menu() {
+
+            document.write("1-Refrigerante <br><br> 2- Suco <br><br> 3-Água <br><br>");
+        }
+
+
+        var escolha = prompt("Faça seu pedido:")
+
+        menu();
+        function escolhaMenu(escolha) {
+            if (escolha === "1")
+             {
+                return "O garçom irá trazer o seu refrigerante!"
+
+            }
+            else if (escolha === "2") {
+                return "O garçom irá trazer o seu suco!"
+
+            }
+            else if (escolha === "3") {
+                return "O garçom irá trazer a sua água!"
+
+            } else {
+                return "Não conseguimos registrar seu pedido"
+            }
+        }
+
+
+        document.write (escolhaMenu(escolha));
+    </Script>
+</body>
