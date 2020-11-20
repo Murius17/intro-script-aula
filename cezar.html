@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function cifraComCifraDeCesar(deslocamento, mensagem) {
+            var mensagemEncriptada = "";
+
+            for (let letra of mensagem) {
+
+                if (deslocamento > 26) {
+                    deslocamento = 26;
+                }
+                var letraNumber = letra.charCodeAt() + deslocamento;
+
+                if (letraNumber >= 90) {
+                    letraNumber = letraNumber - 26;
+                }
+
+                mensagemEncriptada += String.fromCharCode(letraNumber)
+            }
+
+            return mensagemEncriptada;
+        }
+
+        function decifraCifraDeCesar(deslocamento, mensagemCifrada) {
+            var mensagemDecifrada = "";
+
+            for (let letra of mensagemCifrada) {
+
+                if (deslocamento > 26) {
+                    deslocamento = 26;
+                }
+                var letraNumber = letra.charCodeAt() - deslocamento;
+
+                if (letraNumber < 65) {
+                    letraNumber = letraNumber + 26;
+                }
+
+                mensagemDecifrada += String.fromCharCode(letraNumber);
+            }
+            return mensagemDecifrada
+        }
+
+
+    </script>
+</body>
+
+</html>
